@@ -10,6 +10,20 @@ BucketList.prototype.bindEvents = function () {
 
   this.getData();
 
+  PubSub.subscribe('ItemView:Completed-Clicked', (event) => {
+    this.request.put({id: event.detail})
+    .then( (showData) => {
+      PubSub.publish('BucketList:data-loaded', showData);
+    });
+  })
+
+  PubSub.subscribe('ItemView:Delete-Clicked', (event) => {
+    this.request.delete(event.detail)
+    .then( (showData) => {
+      PubSub.publish('BucketList:data-loaded', showData);
+    });
+  })
+
   PubSub.subscribe("FormView:Info-Submitted", (event) => {
     const submittedInfo = {
       description: event.detail,

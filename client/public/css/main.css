@@ -1,0 +1,92 @@
+body {
+  font-family: "Comic Sans MS";
+  margin: 0px;
+}
+
+header {
+  background-color: deeppink;
+  color: lightyellow;
+}
+
+h1 {
+  margin: 0px;
+  padding: 20px;
+  text-align: center;
+}
+
+form {
+  padding: 0px 200px;
+}
+
+#form-view {
+  padding: 20px;
+color: beige;
+background-color: aquamarine;
+}
+
+#list-view {
+  padding: 50px;
+    background-color: darkblue;
+    color: deeppink;
+}
+
+ul {
+  border: 15px dotted yellow;
+  padding: 20px;
+}
+
+li {
+  padding: 10px;
+  text-align: center;
+  font-size: 20px;
+  animation: textcol 100ms;
+  animation-play-state: running;
+  animation-iteration-count: infinite;
+  animation-delay: 0ms;
+  font-style: oblique;
+  font-weight: bold;
+}
+
+@keyframes textcol {
+  from {color: white;}
+  to {color: black;}
+}
+
+button {
+  /* padding: 20px; */
+  color: white;
+  background-color: green;
+  animation: testanim 10s;
+  animation-play-state: running;
+  animation-iteration-count: infinite;
+  animation-delay: 0ms;
+  font-family: monospace;
+  font-size: 30px;
+}
+
+@keyframes testanim {
+  from {padding-top: 5px;}
+  to {padding-top: 50px;}
+}
+
+@keyframes testanim2 {
+  from {padding: 0px 5px;
+  background-color: red;}
+  to {padding: 0px 200px;
+  background-color: black;}
+}
+
+button:hover {
+  animation: testanim2 300ms;
+  animation-play-state: running;
+  animation-iteration-count: infinite;
+  animation-delay: 0ms;
+}
+
+input {
+  background-color: darkblue;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  font-size: 15px;
+}
