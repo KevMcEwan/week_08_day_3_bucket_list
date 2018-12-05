@@ -13,6 +13,7 @@ ListView.prototype.bindEvents = function () {
 };
 
 ListView.prototype.render = function (event) {
+    this.container.innerHTML = '';
     const bucketArray = event;
     const itemView = new ItemView(this.container);
     bucketArray.forEach( (item) => {
